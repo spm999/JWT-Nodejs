@@ -44,6 +44,9 @@ app.post('/login', (req, res) => {
     // Return 401 status for unauthorized access
     return res.status(401).json({ message: 'Invalid credentials' });
   }
+//   else{
+//     return res.json("HHmmm")
+//   }
 
   // Create a JWT token with user information and set expiration to 1 hour
   const token = jwt.sign({ userId: user.id, username: user.username }, secretKey, { expiresIn: '1h' });
@@ -61,13 +64,15 @@ app.get('/protected', authenticateToken, (req, res) => {
 // Middleware to authenticate JWT
 function authenticateToken(req, res, next) {
   // Extract the token from the 'Authorization' header
-  const token = req.header('Authorization');
+//   const token = req.header('Authorization');
+
+const authHeader = req.headers['authorization'];
+const token = authHeader && authHeader.split(' ')[1];
 
   if (!token) {
     // Return 401 status for unauthorized access if token is not provided
     return res.status(401).json({ message: 'Unauthorized' });
   }
-
   // Verify the token using the secret key
   jwt.verify(token, secretKey, (err, user) => {
     if (err) {
