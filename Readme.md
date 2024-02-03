@@ -7,7 +7,7 @@ This is a simple Node.js and Express application demonstrating JWT (JSON Web Tok
 1. **Clone this repository.**
 
    ```bash
-   git clone https://github.com/your-username/express-jwt-authentication.git
+   git clone https://github.com/spm999/JWT-Nodejs.git
 
 
 ## Installation
@@ -15,7 +15,7 @@ This is a simple Node.js and Express application demonstrating JWT (JSON Web Tok
 1. **Navigate to the project directory.**
 
     ```bash
-    cd express-jwt-authentication
+    cd JWT-Nodejs
     ```
 
 2. **Install dependencies.**
@@ -60,6 +60,3 @@ The application uses a simple in-memory user database and a secret key for JWT s
 
 Feel free to contribute to this project by opening issues or submitting pull requests.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
