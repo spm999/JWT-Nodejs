@@ -1,4 +1,4 @@
-# JWT Authentication with Express
+# JWT Authentication with Express and Node
 
 This is a simple Node.js and Express application demonstrating JWT (JSON Web Token) authentication. The application includes user login functionality, token generation, and a protected route that requires a valid JWT for access.
 
